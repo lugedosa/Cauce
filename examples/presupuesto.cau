@@ -1,0 +1,13 @@
+# El total puede aparecer antes que sus dependencias.
+input personas: Int = 4;
+input limite: Int = 1200;
+cell total = subtotal + envio;
+cell subtotal = por_persona(personas, 250);
+cell envio = if subtotal >= 1000 then 0 else 80;
+
+fn por_persona(cantidad: Int, precio: Int) -> Int = cantidad * precio;
+
+require personas > 0, "Debe participar al menos una persona";
+require total <= limite, "El presupuesto supera el límite";
+emit "Total: " + text(total);
+emit "Envío: " + text(envio);

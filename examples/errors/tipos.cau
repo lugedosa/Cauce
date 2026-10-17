@@ -1,0 +1,2 @@
+cell total = 10 + true;
+emit total;

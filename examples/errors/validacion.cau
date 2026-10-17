@@ -1,0 +1,4 @@
+emit "Esta línea no debe publicarse";
+cell total = 1400;
+require total <= 1200, "El total supera el presupuesto";
+emit total;

@@ -1,0 +1,10 @@
+fn acotar(x: Int, inferior: Int, superior: Int) -> Int =
+    if x < inferior then inferior else if x > superior then superior else x;
+fn saludar(nombre: Text) -> Text = "Hola, " + nombre;
+input lectura: Int = 130;
+cell segura = acotar(lectura, 0, 100);
+cell vacia: [Int] = [];
+require segura >= 0 and segura <= 100, "Valor fuera de rango";
+emit saludar("Luis");
+emit segura;
+emit sum(vacia);

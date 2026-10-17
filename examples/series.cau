@@ -1,0 +1,8 @@
+input n: Int = 10;
+cell numeros = range(n);
+cell total = sum(numeros);
+cell promedio = if len(numeros) == 0 then 0 else total // len(numeros);
+require n >= 0 and n <= 100000, "Tamaño de serie fuera de rango";
+emit numeros;
+emit total;
+emit promedio;
